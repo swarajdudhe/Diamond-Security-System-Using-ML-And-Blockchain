@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>Diamond Authentication</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <!-- Main Content end -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Diamond Authentication System</marquee>
+
+            <div class="movie-list-container">
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3><span style="color:rgb(77, 150, 4)" ;>Introduction</span></h3> <br>
+                            <p>In these project, we have built a machine learning model to distinguish between real and
+                                fake diamonds. To achieve this, we have selected five key parameters:<br>
+                                <span style="color:rgb(77, 150, 4)" ;>1. Carat Weight:</span> This is the weight of the
+                                diamond, measured in carats. Larger diamonds
+                                typically have higher values, so carat weight is an essential factor in assessing a
+                                diamond's quality and authenticity.<br>
+                                <span style="color:rgb(77, 150, 4)" ;>2. Cut:</span> The cut of a diamond refers to its
+                                proportions, symmetry, and polish. It
+                                significantly affects the diamond's brilliance and sparkle. A well-cut diamond reflects
+                                light effectively, while a poorly cut one may appear dull.<br>
+                                <span style="color:rgb(77, 150, 4)" ;>3. Color:</span> Diamond color is graded on a
+                                scale from D (colorless) to Z (light yellow or
+                                brown). Colorless diamonds are more valuable because they allow more light to pass
+                                through, enhancing their brilliance. Therefore, color is a crucial factor in determining
+                                a diamond's authenticity and quality.<br>
+                                <span style="color:rgb(77, 150, 4)" ;>4. Clarity:</span> Clarity measures the presence
+                                of internal flaws (inclusions) and external
+                                blemishes in a diamond. Clarity grades range from Flawless (no inclusions visible under
+                                10x magnification) to Included (inclusions visible to the naked eye). A higher clarity
+                                grade indicates a more valuable diamond.<br>
+                                <span style="color:rgb(77, 150, 4)" ;>5. Symmetry:</span> Symmetry refers to how well
+                                the facets of a diamond align with each other.
+                                Diamonds with excellent symmetry have better light performance and are more visually
+                                appealing. Symmetry is a key factor in determining a diamond's beauty and
+                                authenticity.<br><br>
+
+                                we have chosen the random forest algorithm to train your model. Random forest is an
+                                ensemble learning technique that builds multiple decision trees during training. Each
+                                tree is trained on a random subset of the data and uses a random subset of features at
+                                each split point. This randomness helps to prevent overfitting and improves the model's
+                                generalization ability. In the end, the random forest algorithm combines the predictions
+                                of the individual trees to make a final prediction about whether a diamond is real or
+                                fake based on its characteristics.
+                            </p>
+                        </div>
+                    </div><br>
+                </div>
+            </div><br><br>
+
+            <section class="input-5c">
+                <div class="container-5c">
+                    <div class="text">
+                        Enter your data to know diamond is Natural or Artificial...
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="carat" required>
+                                <div class="underline"></div>
+                                <label for="">Enter carat weight of diamond</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="cut" required>
+                                <div class="underline"></div>
+                                <label for="">Enter cut value of the diamond</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="color" required>
+                                <div class="underline"></div>
+                                <label for="">Enter color of the diamond</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="clarity" required>
+                                <div class="underline"></div>
+                                <label for="">Enter clarity of the diamond</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="symmentry" required>
+                                <div class="underline"></div>
+                                <label for="">Enter symmentry of the diamond</label>
+                            </div>
+                        </div>   
+
+                        <div class="form-row">
+                            <div class="form-row submit-btn">
+                                <div class="input-data">
+                                    <div class="inner"></div>
+                                    <input style="width: 750px;" type="submit" value="submit">
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if result %}
+                            {% if result == "Data relates to the Natural Diamond" %}
+                                <h1 style="color: green; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                            {% else %}
+                                <h1 style="color: red; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                            {% endif %}
+                        {% endif %}
+
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- footer section starts  -->
+
+            <div class="footer">
+
+                <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe & Team</a> |
+                    rights reserved by <span>@Gemify</span>
+                </h1>
+
+            </div>
+
+            <!-- footer section ends -->+
+
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/sale.js"></script>
+</body>
+
+</html>

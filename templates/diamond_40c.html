@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Diamond Authentication</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+         <!-- Right Section -->
+         <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Diamond Authentication System </marquee>
+
+            <div class="movie-list-container">
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3> Introduction </h3> <br>
+                            <p>In an expanded version of the work, we have incorporated 33 parameters into the machine
+                                learning model to detect real and fake diamonds. These parameters likely include
+                                additional characteristics such as fluorescence, table percentage, crown angle, girdle
+                                thickness, and more. By utilizing a richer feature set, the model gains a deeper
+                                understanding of the nuances that distinguish genuine diamonds from imitations. This
+                                comprehensive approach enhances the model's accuracy and reliability, enabling more
+                                robust predictions in real-world scenarios. With a broader range of inputs, the model
+                                can capture subtle variations in diamond characteristics, improving its ability to
+                                discern authenticity with higher confidence levels. Overall, this extended model
+                                represents a more sophisticated and comprehensive solution for diamond authentication.
+                            </p>
+                        </div>
+                    </div><br><br>
+                </div>
+            </div><br><br>
+
+            <section class="input-5c">
+                <div class="container-5c">
+                    <div class="text">
+                        Enter your data to know diamond is Natural or Artificial...
+                    </div>
+                    <form action="#" method="post">
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="DiamondPrice" required>
+                                <div class="underline"></div>
+                                <label for="">DiamondPrice</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Carat" required>
+                                <div class="underline"></div>
+                                <label for="">Carat weight </label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Cut" required>
+                                <div class="underline"></div>
+                                <label for="">Cut value</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Color" required>
+                                <div class="underline"></div>
+                                <label for="">Color</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="Clarity" required>
+                                <div class="underline"></div>
+                                <label for="">Clarity</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Symmetry" required>
+                                <div class="underline"></div>
+                                <label for="">Symmetry</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Depth" required>
+                                <div class="underline"></div>
+                                <label for="">Depth</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Table" required>
+                                <div class="underline"></div>
+                                <label for="">Table</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="Length" required>
+                                <div class="underline"></div>
+                                <label for="">Length</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Width" required>
+                                <div class="underline"></div>
+                                <label for="">Width</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Height" required>
+                                <div class="underline"></div>
+                                <label for="">Height</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Cut_Grade" required>
+                                <div class="underline"></div>
+                                <label for="">Cut_Grade</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="Polish_Grade" required>
+                                <div class="underline"></div>
+                                <label for="">Polish_Grade</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Fluorescence" required>
+                                <div class="underline"></div>
+                                <label for="">Fluorescence</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Girdle" required>
+                                <div class="underline"></div>
+                                <label for="">Girdle</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Culet" required>
+                                <div class="underline"></div>
+                                <label for="">Culet</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="Length_CW_Ratio" required>
+                                <div class="underline"></div>
+                                <label for="">Length_CW_Ratio</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Width_CW_Ratio" required>
+                                <div class="underline"></div>
+                                <label for="">Width_CW_Ratio</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Height_CW_Ratio" required>
+                                <div class="underline"></div>
+                                <label for="">Height_CW_Ratio</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Ang_Pav_Polish" required>
+                                <div class="underline"></div>
+                                <label for="">Ang_Pav_Polish</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="Ang_Girdle" required>
+                                <div class="underline"></div>
+                                <label for="">Ang_Girdle</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="Ang_Culet" required>
+                                <div class="underline"></div>
+                                <label for="">Ang_Culet</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data textarea">
+                                <div class="form-row submit-btn">
+                                    <div class="input-data">
+                                        <div class="inner"></div>
+                                        <input type="submit" value="submit">
+                                    </div>
+                                </div>
+                        {% if result %}
+                            {% if result == "Data relates to the Natural Diamond" %}
+                                <h1 style="color: green; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                            {% else %}
+                                <h1 style="color: red; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                            {% endif %}
+                        {% endif %}
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- footer section starts  -->
+
+            <div class="footer">
+
+                <h1 class="credit">created by <a href="#">Swaraj Ravindra Dudhe</a> | rights reserved by
+                    <span>@Gemify</span>
+                </h1>
+
+            </div>
+
+            <!-- footer section ends -->+
+
+
+
+        </div>
+
+
+
+
+        <script src="dashboard.js"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>

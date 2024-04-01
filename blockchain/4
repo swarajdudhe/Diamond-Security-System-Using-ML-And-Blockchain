@@ -1,0 +1,16 @@
+{
+    "DiamondId": "GIA10001",
+    "DiamondName": "Hope Diamond",
+    "OwnerName": "Aditya Sharma",
+    "DateOfMine": "1666",
+    "carat": "0.7",
+    "cut": "4",
+    "color": "Pink",
+    "clarity": "2",
+    "symmetry": "2",
+    "TypeOf": "Natural Diamond",
+    "prev_block": {
+        "hash": "4f13d9c1eb9e850f25671106285f50ea",
+        "filename": "3"
+    }
+}

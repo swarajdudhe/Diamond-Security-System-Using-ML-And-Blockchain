@@ -1,0 +1,16 @@
+{
+    "DiamondId": "DiamondId",
+    "DiamondName": "DiamondName",
+    "OwnerName": "OwnerName",
+    "DateOfMine": "DateOfMine",
+    "carat": "carat",
+    "cut": "cut",
+    "color": "color",
+    "clarity": "clarity",
+    "symmetry": "symmetry",
+    "TypeOf": "TypeOf",
+    "prev_block": {
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "filename": "1"
+    }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>Buy New diamond</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+<style>
+    .container-buy {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card-buy {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .card-buy img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card-buy h3 {
+            margin-bottom: 5px;
+        }
+        .card-buy p {
+            margin-bottom: 10px;
+        }
+        .buy-now {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+</style>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <!-- Main Content end -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Purchase new diamond</marquee>
+
+            <div class="movie-list-container">
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3><span style="color:rgb(77, 150, 4)" ;>Notepoint</span></h3> <br>
+
+                            Purchasing a new diamond is an exciting journey filled with anticipation and elegance. With
+                            attention to the 4Cs - cut, color, clarity, and carat weight - each diamond becomes a
+                            timeless symbol of love and sophistication. Guided by expert advice, you'll find the perfect
+                            diamond to celebrate life's special moments, creating cherished memories that sparkle with
+                            beauty and meaning.
+                            </p>
+                        </div>
+                    </div><br><br>
+                </div>
+            </div><br><br>
+
+                                                                <!--Purchase section start-->
+                                                                    <!-- {% if data %}
+                                                                        <p style="color: green; font-weight: bold;">{{ data }}</p>
+
+                                                                    {% endif %} -->
+            <section>
+                <div class="container-buy">
+                    {% for item in data %}
+                    <div class="card-buy">
+                        
+                        <img src="{{ url_for('static', filename='./image/diamond_buy.jpg') }}" >
+                        <h3>{{ item[0] }}</h3>
+                        <p>Type: {{ item[1] }}</p>
+                        <p>Owner Name: {{item[2] }}</p>
+                        <p>Carat: {{ item[4] }}</p>
+                        <p>Cut: {{ item[5] }}</p>
+                        <p>Color: {{ item[6] }}</p>
+                        <p>Clarity: {{ item[7] }}</p>
+                        <p>Symmetry: {{ item[8] }}</p>
+                        <p>Price: {{ item[9] }}</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                    <!-- Repeat this pattern for more cards -->
+            </section>
+            <!--Purchase section end -->
+
+
+            <!-- footer section starts  -->
+
+            <div class="footer">
+
+                <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe &
+                        Team</a> |
+                    rights reserved by <span>@Gemify</span>
+                </h1>
+
+            </div>
+
+            <!-- footer section ends -->+
+
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/sale.js"></script>
+</body>
+
+</html>

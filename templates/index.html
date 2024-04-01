@@ -1,0 +1,335 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- google fonts css file link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/log-reg.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>Diamond Security System</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='/image/favicon.png')}}" alt="LOGO" width="30" height="30">
+            </div>
+            <div class="logo-container" id="logo-cont">
+                <h1 class="logo">Gemify</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/">
+                        <li class="menu-list-item">Home</li>
+                    </a>
+                    <a href="#movie-list-title">
+                        <li class="menu-list-item">About-Project</li>
+                    </a>
+                    <a href="#movie-list-container">
+                        <li class="menu-list-item">Services</li>
+                    </a>
+                    <a href="#faq-section">
+                        <li class="menu-list-item">FAQ's</li>
+                    </a>
+                    <a href="/contact">
+                        <li class="menu-list-item">Contact-Us</li>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <a href="/movie-website/login.html" alt="Login"></a><img class="profile-picture"
+                    src="{{url_for('static', filename='/image/login-logo.png')}}" alt=""></a>
+                <div class="profile-text-container">
+                    <a href="/login" alt="Login"><span class="profile-text">Login Here</span></a>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="box-search">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <a id="searchButton" href="#">
+                <i class="left-menu-icon fas fa-search"></i>
+            </a>
+        </div>
+        <a href="/"><i class="left-menu-icon fas fa-home"></i></a>
+        <a href="/login"><i class="left-menu-icon fas fa-user"></i></a>
+        <a href="tel:+917219437969"><i class="left-menu-icon fas fa-mobile"></i></a>
+        <a href="#map-ncer"><i class="left-menu-icon fas fa-map"></i></a>
+        <a href="/contact"><i class="left-menu-icon fas fa-users"></i></a>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content">
+                <!-- <img class="featured-title" src="{{url_for('static', filename='/image/bc-flow.gif')}}" alt="">   -->
+
+                <h1>Welcome to <span class="gemify"> Gemify</span> </h1>
+                <p class="featured-desc">Gemify leverages the the power of Artificial Intelligence and our secure
+                    blockchain technology to provide confidence in the diamond supply chain. traceability. Gemify
+                    provides a secure and immutable traceability solution where each step of a diamond’s journey through
+                    the value chain can be recorded, with compliance to best practices</p>
+                <a href="/registration"><button class="featured-button">Register Now</button></a>
+            </div><br><br>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title" id="movie-list-title">About Project</h1><br><br>
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3> Abstract </h3> <br>
+                            <p>In the dynamic landscape of technological advancements, Blockchain (BC) has emerged as a
+                                transformative force. The diamond industry, poised for evolution as coveted investment
+                                assets, faces
+                                challenges in provenance, supply chain traceability, and transaction reliability. This
+                                paper delves into
+                                the adoption of BC in diamonds, exploring its promise in bridging traditional practices
+                                with financial
+                                markets. In this transformative journey, our paper introduces a visionary fusion of
+                                Machine Learning
+                                (ML) algorithms—Decision Tree Classifier, Logistic Regression, Random Forest Algorithm,
+                                Support
+                                Vector Classifier (SVM) and Ensemble Learning Technique. These algorithms discern
+                                diamond
+                                authenticity and power a recommendation system based on attributes like carat, weight,
+                                cut, color,
+                                clarity, and symmetry. This seamless ML integration augments our exploration, adding
+                                predictive
+                                analytics to the broader landscape. Our paper addresses operational issues in the
+                                diamond industry
+                                and proposes countermeasures. It unveils open research issues and challenges associated
+                                with
+                                Blockchain integration, including a case study on frameworks like Everledger and Tracr.
+                                In essence,
+                                this paper explores BC's potential in the diamond industry, unraveling its pros and cons
+                                suggesting
+                                countermeasures, and shedding light on challenges through case studies. The innovative
+                                ML-driven
+                                security paradigm we introduce is designed to reshape the industry's future</p>
+                        </div>
+                    </div><br><br>
+                    <div class="line">
+                        <h4>Keywords</h4> <br>
+                        <p>Machine Learning (ML), Blockchain (BC), SHA256, recommendation system,
+                            Diamond industry, Artificial Intelligence, Counterfeit</p>
+
+                    </div>
+                </div>
+            </div><br><br>
+            <h1 class="movie-list-title">Technology We Used</h1>
+            <div class="featured-content-ML">
+                <!-- <img class="featured-title" src="../movie-website/img/bc-gif.gif" alt=""> -->
+                <h1> <span class="gemify"> Machine Learning</span> </h1>
+                <p class="featured-desc">Machine learning is a branch of artificial intelligence that enables systems to
+                    automatically learn and improve from experience without being explicitly programmed. It involves
+                    algorithms that learn patterns and make predictions or decisions based on data. By analyzing large
+                    datasets, machine learning algorithms can uncover insights and make predictions or decisions with
+                    high accuracy. It is widely used in various fields, including image recognition, natural language
+                    processing, and recommendation systems.<span class="red-text">We mostly belive on random forest
+                        algorithm for more accuracy</span>
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Machine_learning"><button class="featured-button">Read more</button></a>
+            </div>
+            <div class="featured-content-BC">
+                <!-- <img class="featured-title" src="../movie-website/img/bc-gif.gif" alt=""> -->
+                <h1> <span class="gemify"> Blockchain</span> </h1>
+                <p class="featured-desc">Blockchain is a decentralized, distributed ledger technology that records
+                    transactions across multiple computers in a tamper-resistant and transparent manner. It enables
+                    secure and immutable storage of data without the need for intermediaries, offering transparency,
+                    security, and trust in various applications such as cryptocurrency, supply chain management, and
+                    voting systems.<span class="red-text">We mostly belive on Blockchain (BC) for more
+                        security</span>
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Blockchain"><button class="featured-button">Read more</button></a>
+            </div><br><br>
+
+
+
+            <div class="movie-list-container" id="movie-list-container">
+                <h1 class="movie-list-title">Our Servies</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-security.png')}}" alt="">
+                            <span class="movie-list-item-title">Diamond Security</span>
+                            <p class="movie-list-item-desc"> Store your diamond data into blockchain for security</p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-test2.png')}}" alt="">
+                            <span class="movie-list-item-title">Diamond identification</span>
+                            <p class="movie-list-item-desc">Testing of the diamonds using 40 parameters </p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-test1.jpg')}}" alt="">
+                            <span class="movie-list-item-title">Diamond identification</span>
+                            <p class="movie-list-item-desc">Testing of the diamonds using 6 major parameters</p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-recommendation.jpg')}}" alt="">
+                            <span class="movie-list-item-title">Diamond suggestion</span>
+                            <p class="movie-list-item-desc">Get authentic and best suggestions to buy diamonds</p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-price.jpg')}}" alt="">
+                            <span class="movie-list-item-title">Price detection</span>
+                            <p class="movie-list-item-desc" >Detect the price of the diamond as per the today's market
+                            </p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img"
+                                src="{{url_for('static', filename='/image/diamond-store.jpg')}}" alt="">
+                            <span class="movie-list-item-title">Diamond Store</span>
+                            <p class="movie-list-item-desc">Buy diamonds as per your need and market price </p>
+                            <button class="movie-list-item-button" onclick="alertt()">See more</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content-reg">
+                <h1 class="reg">Register your interest in <span>Gemify</span> today</h1>
+                <p class="featured-desc">To get the latest information on the Gemify service, as well as access to a
+                    range of promotional videos and one-pagers, and to sign up to our newsletter, please register below
+                </p>
+                <a href="/registration"><button class="featured-button">Register Now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="faqs-main" id="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-container">
+            <div class="faq active">
+                <h3 class="faq-title">
+                    How do I find out more?
+                </h3>
+
+                <p class="faq-text">
+                    For more information about Gemify please contact us
+                </p>
+
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="faq">
+                <h3 class="faq-title">
+                    Do you need to provide the diamond for security?
+                </h3>
+                <p class="faq-text">
+                    No, You just have to provide the data of diamonds
+                </p>
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="faq">
+                <h3 class="faq-title">
+                    What was the accuracy for real diamond prediction?
+                </h3>
+                <p class="faq-text">
+                    We used multiple algorithms so accuracy is depends but highest accuracy is 99%
+                </p>
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="faq">
+                <h3 class="faq-title">
+                    Does we provide insurance claim when diamonds get lost?
+                </h3>
+                <p class="faq-text">
+                    No, we are a security firm not a insurance company
+                </p>
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="faq">
+                <h3 class="faq-title">
+                    Why user come to us ?
+                </h3>
+                <p class="faq-text">
+                    Because for precious diamonds it is necessary to secure data of diamonds as well as diamond itself
+                </p>
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section starts  -->
+
+    <div class="footer">
+
+        <div class="share">
+            <h3>follow us</h3>
+            <a href="#" class="fab fa-facebook-f" onclick="SocialMedia()"></a>
+            <a href="#" class="fab fa-twitter" onclick="SocialMedia()"></a>
+            <a href="#" class="fab fa-instagram" onclick="SocialMedia()"></a>
+            <a href="#" class="fab fa-pinterest" onclick="SocialMedia()"></a>
+        </div>
+
+        <div id="map-ncer">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.5136822848926!2d73.6636083!3d18.7305786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b1e539a71065%3A0x83d960dd531618e8!2sNCER%20Pune%20-%20Nutan%20College%20Of%20Engineering%20And%20Research%20%7C%20Skill%20Based%20Engineering%20College%20Pune!5e0!3m2!1shi!2sin!4v1711533068754!5m2!1shi!2sin"
+                width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+        <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe & Team</a> | rights reserved by <span>@Gemify</span>
+        </h1>
+
+    </div>
+
+    <!-- footer section ends -->
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

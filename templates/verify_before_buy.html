@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>Diamond Authentication</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+    <style>
+        :root {
+        --primary-color: rgb(11, 78, 179);
+        }
+
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        }
+        /* Global Stylings */
+            label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #646161;
+            }
+
+            input {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            }
+
+            .width-50 {
+            width: 50%;
+            }
+
+            .ml-auto {
+            margin-left: auto;
+            }
+
+            .text-center {
+            text-align: center;
+            }
+
+            /* Progressbar */
+            .progressbar {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            counter-reset: step;
+            margin: 2rem 0 4rem;
+            }
+
+            .progressbar::before,
+            .progress {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 100%;
+            background-color: #dcdcdc;
+            z-index: -1;
+            }
+
+            .progress {
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: 0.3s;
+            }
+
+            .progress-step {
+            width: 2.1875rem;
+            height: 2.1875rem;
+            background-color: #6e6767;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .progress-step::before {
+            counter-increment: step;
+            content: counter(step);
+            }
+
+            .progress-step::after {
+            content: attr(data-title);
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            font-size: 0.85rem;
+            color: #666;
+            }
+
+            .progress-step-active {
+            background-color: var(--primary-color);
+            color: #f3f3f3;
+            }
+
+            /* Form */
+            .form {
+            width: 700px;
+            /* margin: 0 auto; */
+            border: 1px solid #ccc;
+            border-radius: 0.35rem;
+            padding: 1.5rem;
+            margin-left: 120px;
+            }
+
+            .form-step {
+            display: none;
+            transform-origin: top;
+            animation: animate 0.5s;
+            }
+
+            .form-step-active {
+            display: block;
+            }
+
+            .input-group {
+            margin: 2rem 0;
+            }
+
+            @keyframes animate {
+            from {
+                transform: scale(1, 0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1, 1);
+                opacity: 1;
+            }
+            }
+
+            /* Button */
+            .btns-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            }
+
+            .btn {
+            padding: 0.75rem;
+            display: block;
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: #f3f3f3;
+            text-align: center;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+            .btn:hover {
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+            }
+
+            @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --color: rgba(30, 30, 30);
+
+  font-family: "Jura", sans-serif;
+  color: var(--color);
+}
+
+h1 {
+  text-align: center;
+  color: rgb(70, 70, 129);
+  margin-left: 100px;
+}
+
+.ul-jinja{
+  --col-gap: 2rem;
+  --barH: 1rem;
+  --roleH: 2rem;
+  --flapH: 2rem;
+
+  width: min(60rem, 90%);
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--col-gap);
+  padding-inline: calc(var(--col-gap) / 2);
+
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  margin-left: 100px;
+}
+.ul-jinja li {
+  width: 10em;
+  display: grid;
+  grid-template:
+    "role"
+    "icon"
+    "title"
+    "descr";
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: calc(var(--flapH) + 1rem);
+  text-align: center;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) var(--roleH),
+    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
+    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
+  );
+  clip-path: polygon(
+    calc(var(--col-gap) / -2 - 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
+    50% 100%,
+    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
+  );
+}
+
+/* bar */
+.ul-jinja li::before {
+  content: "";
+  grid-area: role;
+  height: var(--barH);
+  width: calc(100% + var(--col-gap));
+  margin-left: calc(var(--col-gap) / -2);
+  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
+  background: grey;
+  z-index: -1;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* role */
+.ul-jinja li::after {
+  content: "";
+  grid-area: role;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+  height: var(--roleH);
+}
+
+.ul-jinja li .icon,
+.ul-jinja li .title,
+.ul-jinja li .descr {
+  padding-inline: 1rem;
+  color: white;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.ul-jinja li .icon {
+  font-size: 3rem;
+}
+.ul-jinja li .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.ul-jinja li .descr {
+  font-size: 0.9rem;
+}
+
+.last-btn:hover{
+  background-color: greenyellow;
+  border-radius: 20px;
+  cursor:pointer;
+  color: white;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <!-- Main Content end -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Diamond Verification System</marquee><br><br><br><br>
+
+            <section>
+                <form action="#" class="form" method="post">
+                    <h1 class="text-center">Verify Diamond Before Buy</h1>
+                    <!-- Progress bar -->
+                    <div class="progressbar">
+                      <div class="progress" id="progress"></div> 
+                      <div class="progress-step progress-step-active" data-title="Authenticity Check"></div>
+                      <div class="progress-step" data-title="Diamond ownership"></div>
+                      <div class="progress-step" data-title="Price approximation"></div>
+                      <div class="progress-step" data-title="Personal data"></div>
+                    </div>
+              
+                    <!-- Steps -->
+                    <div class="form-step form-step-active fff">
+                      <div class="input-group">
+                        <label for="username">Enter the Carat value</label>
+                        <input type="text" name="Carat" id="username" />
+                      </div>
+                      <div class="input-group">
+                        <label for="position">Enter the Cut value</label>
+                        <input type="text" name="Cut" id="position" />
+                      </div>
+                      <div class="input-group">
+                        <label for="position">Enter the Color value (in numeric)</label>
+                        <input type="text" name="Color" id="position" />
+                      </div>
+                      <div class="input-group">
+                        <label for="position">Enter the Clarity value</label>
+                        <input type="text" name="Clarity" id="position" />
+                      </div>
+                      <div class="input-group">
+                        <label for="position">Enter the Symmetry of diamond</label>
+                        <input type="text" name="Symmetry" id="position" />
+                      </div>
+                      <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="phone">Enter the diamond hash code</label>
+                        <input type="text" name="hash" id="phone" />
+                      </div>
+                      <div class="input-group">
+                        <label for="email">Enter the name of diamond</label>
+                        <input type="text" name="DiamondName" id="email" />
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="ID">Diamond ID</label>
+                        <input type="text" name="diamondID" id="ID" />
+                      </div>
+                      <div class="input-group">
+                        <label for="ID">Diamond other data</label>
+                        <input type="text" name="otherData" id="ID" />
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="password">Enter your name</label>
+                        <input type="text" name="yourname" id="password" />
+                      </div>
+                      <div class="input-group">
+                        <label for="confirmPassword">Enter your mobile number</label>
+                        <input type="text" name="monumber" id="confirmPassword"/>
+                      </div>
+                      <div class="input-group">
+                        <label for="confirmPassword">Enter your email</label>
+                        <input type="text" name="email" id="confirmPassword"/>
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <input type="submit" value="Submit" class="btn" />
+                      </div>
+                    </div>
+                  </form>
+
+            </section>
+            {% if data %}
+            <div style="margin-top: 20px; font-weight: 20;">         
+
+                    <div>
+                        <h1>Results on your data</h1><br>
+                        <ul class="ul-jinja">
+                            <li style="--accent-color:#0B374D">
+                                <div class="icon"><i class="fa-brands fa-codepen"></i></div>
+                                <div class="title">Module 01</div>
+                                <div class="descr">{{ data[0] }}</div>
+                            </li>
+                            <li style="--accent-color:#1286A8">
+                                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                                <div class="title">Module 02</div>
+                                <div class="descr">{{ data[2] }}</div>
+                            </li>
+                            <li style="--accent-color:#D2B53B">
+                                <div class="icon"><i class="fa-brands fa-css3"></i></div>
+                                <div class="title">Module 03</div>
+                                <div class="descr">{{ data[1] }}</div>
+                            </li>
+                            <li style="--accent-color:#AC2A1A">
+                                <div class="icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="title">Module 04</div>
+                                <div class="descr">Want to store your data into the blockchain ?</div>
+                                <a href="/secure_diamond"><button class="last-btn" style="padding: 4px; background-color: green;">Click here to secure your data</button></a>
+                            </li>
+                        </ul>
+                    </div>
+            </div> 
+            {% endif %}
+
+
+            <!-- footer section starts  -->
+
+            <div class="footer" style="margin-top: 30px;">
+
+                <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe & Team</a> |
+                    rights reserved by <span>@Gemify</span>
+                </h1>
+
+            </div>
+
+            <!-- footer section ends -->+
+
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/sale.js"></script>
+    <script>
+        const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
+    }
+  });
+
+  const progressActive = document.querySelectorAll(".progress-step-active");
+
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+    </script>
+</body>
+
+</html>

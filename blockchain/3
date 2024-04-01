@@ -1,0 +1,16 @@
+{
+    "DiamondId": "GIA10000",
+    "DiamondName": "Kohinoor",
+    "OwnerName": "Ananya Patel",
+    "DateOfMine": "1526",
+    "carat": "0.3",
+    "cut": "3",
+    "color": "red",
+    "clarity": "3",
+    "symmetry": "3",
+    "TypeOf": "Natural Diamond",
+    "prev_block": {
+        "hash": "f0eab0b0fc34e81dfcf0357a1d28458e",
+        "filename": "2"
+    }
+}

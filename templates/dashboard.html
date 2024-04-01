@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>User Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/{{ username }}">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Your Analytics</h1>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Diamonds</h3>
+                            <h1>$65,024</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Your Visits</h3>
+                            <h1>21,200</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-48%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Your Searches</h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+            <!-- End of Analyses -->
+            <h1>Services you can take...</h1>
+            <!-- services -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/secure_diamond"><h2>Diamond Security</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/blaockchain-icon.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/diamond_5c"><h2>Diamond Dection with 5C</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/ml1.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/diamond_40c"><h2>Diamond Dection with 40C</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/ml2.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/recommendation"><h2>Diamond suggestion</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/recommendation.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/priceDetection"><h2>Diamond Price Dection</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/price.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <a class="link-text-css" href="/VerifyBeforeBuy"><h2>Verify Before Buy</h2></a>
+                        </div>
+                        <div class="progresss">
+                            <img src="{{url_for('static', filename='/image/store.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Servies -->
+
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>Top Users</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="{{url_for('static', filename='/image/swaraj.jpg')}}">
+                        <h2>Swaraj Dudhe</h2>
+                        <p>54 Min Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{url_for('static', filename='/image/prajakta.jpg')}}">
+                        <h2>Prajakta Ichole</h2>
+                        <p>3 Hours Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{url_for('static', filename='/image/pankaj.jpg')}}">
+                        <h2>Pankaj Mourya</h2>
+                        <p>6 Hours Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{url_for('static', filename='/image/plus.png')}}">
+                        <h2>More</h2>
+                        <p>Find more User</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>{{ username }}</b></p>
+                        <small class="text-muted">user-profile</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="{{url_for('static', filename='/image/profile.png')}}">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2>Welcome to <span class="danger">Gemify</span></h2>
+                    <p> Thank you for choosing us! </p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

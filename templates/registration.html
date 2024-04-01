@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts css file link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/log-reg.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>Register yourself now</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='/image/favicon.png')}}" alt="LOGO" width="30" height="30">
+            </div>
+            <div class="logo-container" id="logo-cont">
+                <h1 class="logo">Gemify</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/">
+                        <li class="menu-list-item">Home</li>
+                    </a>
+                    <a href="/#movie-list-title">
+                        <li class="menu-list-item">About-Project</li>
+                    </a>
+                    <a href="/#movie-list-container">
+                        <li class="menu-list-item">Services</li>
+                    </a>
+                    <a href="/#faq-section">
+                        <li class="menu-list-item">FAQ's</li>
+                    </a>
+                    <a href="/contact">
+                        <li class="menu-list-item">Contact-Us</li>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <a href="/movie-website/login.html" alt="Login"></a><img class="profile-picture" src="{{url_for('static', filename='/image/login-logo.png')}}" alt=""></a>
+                <div class="profile-text-container">
+                    <a href="/login" alt="Login"><span class="profile-text">Login Here</span></a>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="box-search">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <a id="searchButton" href="#">
+                <i class="left-menu-icon fas fa-search"></i>
+            </a>
+        </div>
+        <a href="/"><i class="left-menu-icon fas fa-home"></i></a>
+        <a href="/login"><i class="left-menu-icon fas fa-user"></i></a>
+        <a href="tel:+917219437969"><i class="left-menu-icon fas fa-mobile"></i></a>
+        <a href="/#map-ncer"><i class="left-menu-icon fas fa-map"></i></a>
+        <a href="/contact"><i class="left-menu-icon fas fa-users"></i></a>
+    </div>
+    
+<!-- contact us code  -->
+    <section>
+        <div class="container-login">
+            <h1>Please Register Here</h1>
+            <form class="login-form" method="POST">
+            <div class="outer-form">
+                <div class="left-form-0501">
+                    <div class="form-control">
+                        <input type="text" name="name" required>
+                        <label>Enter Your Name</label>
+                      </div>
+        
+                      <div class="form-control">
+                        <input type="text" name="mobileno" required>
+                        <label>Enter Your Mobile Number</label>
+                      </div>
+        
+                      <div class="form-control">
+                        <input type="text" name="email" required>
+                        <label>Enter Your Email</label>
+                      </div>
+              
+                      <div class="form-control">
+                        <input type="password" name="password" required>
+                        <label>Enter Your Password</label>
+                      </div>
+                </div>
+                <div class="right-form-0501">
+                    <div class="form-control">
+                        <input type="text" name="address" required>
+                        <label>Enter Your Address</label>
+                      </div><br>
+                            
+                      <label >Register as a: </label><br>
+                      <div class="radio-btn" >
+                        <div class="right-select">
+                        <input type="radio" id="css" name="registerAs" value="Individual">
+                        <label for="css">Individual Person</label><br>
+                      </div>
+                      <div class="left-select">
+                        <input type="radio" id="javascript" name="registerAs" value="Organization">
+                        <label for="javascript">Organization</label>
+                    </div>
+                    </div>
+        
+                      <div class="form-control">
+                        <input type="text" name="vemail" required>
+                        <label>Verify Your Email</label>
+                      </div>
+
+                      <div class="form-control">
+                        <input type="password" name="vpassword" required>
+                        <label>Verify Your Password</label>
+                      </div>
+                </div>
+                </div>
+      
+              <button class="btn">Click Here To Register</button><br>
+              {% if result %}
+                            {% if result == "Registration Successfully Completed, Thank you" %}
+                                <p style="color: green; font-weight: bold;">{{ result }}</p>
+                            {% else %}
+                                <p style="color: red; font-weight: bold;">{{ result }}</p>
+                            {% endif %}
+                        {% endif %}
+
+            <p class="text">Already have account? <a href="/login">Login Here</a> </p>
+            </form>
+          </div>
+
+
+    </section>
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="share">
+        <h3>Follow us for necessary updates</h3>
+        <a href="#" class="fab fa-facebook-f" onclick="SocialMedia()"></a>
+        <a href="#" class="fab fa-twitter" onclick="SocialMedia()"></a>
+        <a href="#" class="fab fa-instagram" onclick="SocialMedia()"></a>
+        <a href="#" class="fab fa-pinterest" onclick="SocialMedia()"></a>
+    </div>
+
+    <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe & Team</a> | rights reserved by <span>@Gemify</span>
+    </h1>
+
+</div>
+
+<!-- footer section ends -->
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+
+    <title>Secure your diamond data</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+<style>
+    #fileInput {
+        display: none;
+    }
+
+    .upload-button {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 40px;
+        transition: background-color 0.3s ease;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .upload-button:hover {
+        background-color: darkgreen;
+    }
+
+    #preview {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+
+    #preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .choosefile {
+        margin-left: 210px;
+        display: flex;
+    }
+    /* .jinja1{
+        display: flex;
+    } */
+    .outer-jinja{
+        /* border: 2px solid red; */
+        margin-left: 200px;
+    }
+    .jinja2{
+        display: inline-block;
+        width: 150px;
+        padding: 5px;
+        
+    }
+    .jinja-btn{
+        background-color: rgb(13, 166, 13); 
+        width: 1500px; 
+        color: white; 
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        margin-left: 160px;
+    }
+    .j2{
+        border: 2px solid rgb(62, 2, 2);
+    }
+    .j3{
+        border: 2px solid rgb(62, 2, 2);
+        width: 300px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <!-- Main Content end -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Secure your diamond data</marquee>
+
+            <div class="movie-list-container">
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3><span style="color:rgb(77, 150, 4)" ;>Notepoint</span></h3> <br>
+
+                            Diamond security leveraging blockchain technology offers unparalleled transparency and trust
+                            in the diamond industry. By recording each diamond's journey from the mine to the market on
+                            a decentralized ledger, blockchain ensures the authenticity and integrity of every diamond
+                            transaction. Immutable records prevent tampering or fraud, providing assurance to consumers
+                            and stakeholders alike. Through this innovative approach, blockchain strengthens security
+                            measures, fosters ethical practices, and enhances confidence in the diamond trade,
+                            ultimately promoting a more sustainable and accountable industry.
+                            </p>
+                        </div>
+                    </div><br><br>
+                </div>
+            </div><br><br>
+
+            <!--Purchase section start-->
+            <section>
+                <section class="input-5c">
+                    <div class="container-5c">
+                        <div class="text">
+                            Enter your data to store into a Blockchain
+                        </div>
+                        <form action="#" method="POST">
+                            <div class="form-row">
+                                <div class="input-data">
+                                    <input type="text" name="DiamondId" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter DiamondId or name</label>
+                                </div>
+                                <div class="input-data">
+                                    <input type="text" name="DiamondName" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter name of the diamond</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-data">
+                                    <input type="text" name="OwnerName" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter name of owner</label>
+                                </div>
+                                <div class="input-data">
+                                    <input type="text" name="DateOfMine" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter Date of mining or NA</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-data">
+                                    <input type="text" name="carat" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter carat weight of diamond</label>
+                                </div>
+                                <div class="input-data">
+                                    <input type="text" name="cut" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter cut value of diamond</label>
+                                </div>
+                            </div>  
+                            <div class="form-row">
+                                <div class="input-data">
+                                    <input type="text" name="color" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter color of diamond</label>
+                                </div>
+                                <div class="input-data">
+                                    <input type="text" name="clarity" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter clarity value of diamond</label>
+                                </div>
+                            </div> 
+                            <div class="form-row">
+                                <div class="input-data">
+                                    <input type="text" name="symmetry" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter symmetry value of diamond</label>
+                                </div>
+                                <div class="input-data">
+                                    <input type="text" name="TypeOf" required>
+                                    <div class="underline"></div>
+                                    <label for="">Enter type of diamond</label>
+                                </div>
+                            </div>   
+    
+                            <div class="form-row">
+                                <div class="form-row submit-btn">
+                                    <div class="input-data">
+                                        <div class="inner"></div>
+                                        <input style="width: 750px;" type="submit" value="submit">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            {% if result %}
+                                {% if result == "Block created successfully." %}
+                                    <h1 style="color: green; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                                {% else %}
+                                    <h1 style="color: red; font-weight: bold; margin-left: 180px;">{{ result }}</h1>
+                                {% endif %}
+                            {% endif %}
+    
+                        </form>
+                    </div>
+                </section>
+            </section>
+            <!--Purchase section end -->
+            <div class="outer-jinja">
+                <div>
+                    <a href="/checking" class="jinja-btn">Check Mined blocks in the blockchain </a><br><br>
+                </div>
+                <div style="margin-top: 20px; font-weight: 20;">         
+                {% for res in checking_results %}
+                    <div class="jinja1">
+                       <div class="jinja2 j2"> Block {{ res['block'] }} </div> <div class="jinja2 j2"> {{ res['result'] }} </div> <div class="jinja2 j3"> {{ res['prev_hash'] }} </div>
+                    </div>
+                {% endfor %}
+                </div> 
+            </div>
+
+            <!-- footer section starts  -->
+
+            <div class="footer">
+
+                <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe &
+                        Team</a> |
+                    rights reserved by <span>@Gemify</span>
+                </h1>
+
+            </div>
+            
+
+            <!-- footer section ends -->+
+
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/sale.js"></script>
+</body>
+
+</html>

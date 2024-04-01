@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>Diamond Price Detection</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/favicon.png')}}">
+                    <h2><span class="danger">Gemify</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/dashboard/<username>">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/sale_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale Diamond</h3>
+                </a>
+                <a href="/buy_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Buy Diamond</h3>
+                </a>
+                <a href="/secure_diamond">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Secure Diamond Data</h3>
+                </a>
+                <a href="tel: +917219437969">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Emergency Support</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="/">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <!-- Main Content end -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        dark_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        light_mode
+                    </span>
+                </div>
+
+
+            </div>
+            <!-- End of Nav -->
+            <!-- Added section -->
+            <marquee direction="left">Diamond Price Detection System</marquee>
+
+            <div class="movie-list-container">
+                <div class="box">
+                    <div class="lines">
+                        <div class="line">
+                            <h3><span style="color:rgb(77, 150, 4)" ;>Introduction</span></h3> <br>
+                            <p>
+                                In diamond price detection system, employing a linear regression model has proven
+                                effective, achieving an accuracy of up to 77 percent. Linear regression is a fundamental
+                                statistical method used for modeling the relationship between a dependent variable and
+                                one or more independent variables. In this context, your model likely utilizes features
+                                such as carat weight, cut, clarity, and color to predict diamond prices. Despite its
+                                simplicity, linear regression offers interpretability, making it a suitable choice for
+                                understanding how each feature contributes to the overall price prediction. Through
+                                iterative adjustments and training on relevant data, your system has successfully
+                                learned the underlying patterns within diamond pricing, enabling accurate predictions
+                                for users.
+                            </p>
+                        </div>
+                    </div><br>
+                </div>
+            </div><br><br>
+
+            <section class="input-5c">
+                <div class="container-5c">
+                    <div class="text">
+                        Understand the approximate price so that no one can cheat you...
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="carat" required>
+                                <div class="underline"></div>
+                                <label for="">Enter carat weight of diamond</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="cut" required>
+                                <div class="underline"></div>
+                                <label for="">Enter cut value of the diamond</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="color" required>
+                                <div class="underline"></div>
+                                <label for="">Enter color of the diamond</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="clarity" required>
+                                <div class="underline"></div>
+                                <label for="">Enter clarity of the diamond</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="symmentry" required>
+                                <div class="underline"></div>
+                                <label for="">Enter symmentry of the diamond</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" name="TypeOfDiamond" required>
+                                <div class="underline"></div>
+                                <label for="">Diamond Type (Artificial = 0; Natural = 1)</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-row submit-btn">
+                                <div class="input-data">
+                                    <div class="inner"></div>
+                                    <input style="width: 750px;" type="submit" value="submit">
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if result %}
+                        <h1 style="color: green; font-weight: bold; margin-left: 80px;"> The approximate price of diamond is almost {{ result }}</h1>
+                        {% endif %}
+
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- footer section starts  -->
+
+            <div class="footer">
+
+                <h1 class="credit">created by <a href="https://swarajdudhe.github.io/my-portfolio/">Swaraj Dudhe &
+                        Team</a> |
+                    rights reserved by <span>@Gemify</span>
+                </h1>
+
+            </div>
+
+            <!-- footer section ends -->+
+
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/sale.js"></script>
+</body>
+
+</html>
